@@ -1,18 +1,25 @@
 <?php
-$a=100;
+$a=18;
 $b=6;
-$oppr = "7";
+$oppr = "+";
 if($oppr == "+")
-echo "Addition : ",$a+$b;
+{
+echo "Add",$a+$b;
+}
 else if ($oppr== "-")
-echo "Substraction",$a-$b;
+{
+echo "Sub",$a-$b;
+}
 else if($oppr == "*")
-echo "Maltiplication : ",$a*$b;
+{
+echo "Maltipy : ",$a*$b;
+}
 else if ($oppr=="/")
-echo "Division : ", $a/$b;
-else if ($oppr=="%")
-echo "Mode ",$a%$b;
+{
+echo "Divid : ", $a/$b;
+}
 else
+{
 echo "Invalid operator","<br>";
-echo "Please Enter Valid operator......."
+  }
 ?>
