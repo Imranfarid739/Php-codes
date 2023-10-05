@@ -1,0 +1,118 @@
+<form action="" method="get">
+    <table border="1" class="frm">
+    <div>
+        <h1>Registration Form</h1> 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: red;
+            margin: 50px; /* Corrected margin property */
+            padding: 10px;
+        }
+
+        .container {
+            width: 50%;
+            margin: 100px; /* Corrected margin property */
+            padding: 50px;
+            background-color: yellow;
+        }
+        input[type="submit"] {
+        background-color: green; /* Change the background color */
+        color: white; /* Change the text color */
+        padding: 10px 20px;
+        
+        text-align: center;
+        font-size: large;
+        border: dot; /* Remove the border */
+        cursor: pointer; /* Add pointer cursor on hover */
+    }
+
+        .table {
+          
+    border-collapse: collapse;
+    width: calc(140% - 300px);          
+    width: 50%; /* Corrected width value */
+     border-collapse: dot; /* Corrected property value */
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"], 
+        input[type="CNIC"] 
+        {
+            width: 100%; /* Corrected width value */
+            padding: 10px;
+            border: 10px solid #ccc; /* Corrected border property */
+            border-radius: 50px;
+        }
+
+        button[type="submit"] {
+            background-color: brown;
+            color: gray;
+            padding: 10px 20px;
+            border: solid;
+            border-radius: 100px;
+            margin: right 500px;  ;
+        }
+
+        button[type="submit"]:hover {
+            background-color: orange;
+            margin: right 500px;  ; 
+        }
+    </style>
+</head>
+<body>
+<div>
+        <tr><td>
+        <label for="first_name">First Name:</label>
+        </td>
+        <td><input type="text" id="first_name" name="first_name" required></td>
+        <tr>
+        <td><label for="last_name">Last Name:</label></td>
+        <td><input type="text" id="last_name" name="last_name" required></td>
+        </tr>
+        <tr>
+        
+         <td><label for="email">Email:</label></td>
+         <td><input type="email" id="email" name="email" required></td>
+         <tr>
+         <td><label for="CNIC">CNIC:</label></td>
+        <td><input type="CNIC" id="CNIC" name="CNIC" required></td>
+        </tr>
+<tr>
+    <td>
+    <input type="submit" name="Register"  value="Register">
+    </td>
+    
+</tr>
+
+    </table>
+    <div>
+</form>
+
+
+<table border="1" class="table">
+    <?php
+    if(isset($_GET['Register'])){
+        $name = $_GET['first_name'];
+        $lastname = $_GET['last_name'];
+        $email = $_GET['email'];
+        $password = $_GET['CNIC'];
+       
+        
+        echo "<tr><td>"."First Name"."</td><td>" . $name . "</td></tr>" ."<br>";
+        echo "<tr><td>"."Last Name"."</td><td>" . $lastname . "</td></tr>"."<br>";
+        echo "<tr><td>"."Email Address"."</td><td>" . $email ."</td></tr>"."<br>";
+        echo "<tr><td>"."CNIC"."</td><td>" . $password . "</td></tr>"."<br>";
+        
+    }
+    ?>
+    </table>
